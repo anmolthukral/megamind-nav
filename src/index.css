@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-transparent; /* Transparent body for overlay */
+  }
+}
