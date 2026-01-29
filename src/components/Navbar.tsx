@@ -11,13 +11,14 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-[9999] bg-white/90 backdrop-blur-md border-b border-gray-200 text-gray-900 font-sans shadow-sm">
+  return (
+    <nav className="fixed top-0 left-0 w-full z-[9999] bg-bg-primary/90 backdrop-blur-md border-b border-white/10 text-text-primary font-sans shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <a href="http://localhost:5173/" className="text-2xl font-bold bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">
-              Engineering Playbook
+            <a href="http://localhost:5173/" className="text-2xl font-bold font-heading bg-gradient-to-r from-accent to-purple-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
+              Anmol Thukral
             </a>
           </div>
 
@@ -27,7 +28,7 @@ const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-text-secondary hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-all hover:-translate-y-0.5"
               >
                 {link.name}
               </a>
@@ -38,7 +39,7 @@ const Navbar: React.FC = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-500 hover:text-indigo-600 focus:outline-none"
+              className="text-text-secondary hover:text-accent focus:outline-none p-2"
             >
               <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                 {isOpen ? (
@@ -54,13 +55,13 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100">
+        <div className="md:hidden bg-surface border-t border-border shadow-xl">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {links.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="block text-gray-500 hover:text-indigo-600 hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium"
+                className="block text-text-secondary hover:text-accent hover:bg-white/5 px-3 py-2 rounded-md text-base font-medium"
               >
                 {link.name}
               </a>
