@@ -1,11 +1,38 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-// @ts-ignore
-import { r2wc } from 'r2wc';
+import { createRoot, Root } from 'react-dom/client'
 import Navbar from './components/Navbar';
 import './index.css'
 
-// If running in dev mode (standalone), render to root
+class WebNavbar extends HTMLElement {
+  private root: Root | null = null;
+
+  connectedCallback() {
+    if (!this.root) {
+      // Render directly into the custom element (Light DOM)
+      this.root = createRoot(this);
+      this.root.render(
+        <StrictMode>
+          <Navbar />
+        </StrictMode>
+      );
+    }
+  }
+
+  disconnectedCallback() {
+    if (this.root) {
+      this.root.unmount();
+      this.root = null;
+    }
+  }
+}
+
+// Register as Web Component
+if (!customElements.get('engineering-playbook-nav')) {
+  customElements.define('engineering-playbook-nav', WebNavbar);
+}
+
+// Dev mode fallback is not really needed as we can just load the module, 
+// but if we want standalone dev mode for common-nav:
 if (import.meta.env.DEV) {
   const root = document.getElementById('root');
   if (root) {
@@ -16,7 +43,3 @@ if (import.meta.env.DEV) {
     )
   }
 }
-
-// Register as Web Component
-const WebNavbar = r2wc(Navbar, { props: {}, shadow: false }); // Disable shadow DOM so global CSS works
-customElements.define('engineering-playbook-nav', WebNavbar);
