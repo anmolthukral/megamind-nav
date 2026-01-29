@@ -3,16 +3,7 @@
   "applications": {
     "megamind-blogs": {
       "routing": [
-        {
-          "paths": ["/", "/blogs", "/blogs/:path*"]
-        }
-      ]
-    },
-    "megamind-profile": {
-      "routing": [
-        {
-          "paths": ["/profile", "/profile/:path*"]
-        }
+        { "paths": ["/", "/blogs", "/blogs/:path*"] }
       ]
     }
   }
