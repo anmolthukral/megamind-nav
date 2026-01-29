@@ -2,12 +2,9 @@
   "$schema": "https://openapi.vercel.sh/microfrontends.json",
   "applications": {
     "megamind-blogs": {
-      "development": {
-        "fallback": "megamind-tutorials-ckmu.vercel.app"
-      },
       "routing": [
         {
-          "paths": ["/blogs", "/blogs/:path*"]
+          "paths": ["/", "/blogs", "/blogs/:path*"]
         }
       ]
     },
