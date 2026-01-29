@@ -12,5 +12,19 @@
         }
       ]
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/blogs/:path*",
+      "destination": "https://megamind-blogs.vercel.app/:path*"
+    },
+    {
+      "source": "/profile/:path*",
+      "destination": "https://megamind-profile.vercel.app/:path*"
+    },
+    {
+      "source": "/tutorials/:path*",
+      "destination": "https://megamind-tutorials.vercel.app/:path*"
+    }
   ]
 }
