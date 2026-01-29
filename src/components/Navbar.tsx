@@ -4,13 +4,12 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { name: 'Home', href: 'http://localhost:5173/' },
-    { name: 'Tutorials', href: 'http://localhost:5173/state' },
-    { name: 'Blogs', href: 'http://localhost:3000/' },
-    { name: 'Profile', href: 'http://localhost:8080/' },
+    { name: 'Home', href: '/' },
+    { name: 'Tutorials', href: '/tutorials' },
+    { name: 'Blogs', href: '/blogs' },
+    { name: 'Profile', href: '/profile' },
   ];
 
-  return (
   return (
     <nav className="fixed top-0 left-0 w-full z-[9999] bg-bg-primary/90 backdrop-blur-md border-b border-white/10 text-text-primary font-sans shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
