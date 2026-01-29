@@ -19,7 +19,4 @@ export default defineConfig({
       formats: ['es', 'umd'],
     },
   },
-  define: {
-    'process.env': {} // Fix for potential env issues in browser
-  }
 })
