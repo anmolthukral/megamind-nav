@@ -19,4 +19,4 @@ if (import.meta.env.DEV) {
 
 // Register as Web Component
 const WebNavbar = r2wc(Navbar, { props: {} }); // Add props here if needed
-customElements.define('megamind-nav', WebNavbar);
+customElements.define('engineering-playbook-nav', WebNavbar);

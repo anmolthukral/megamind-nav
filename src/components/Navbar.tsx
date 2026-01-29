@@ -4,9 +4,10 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { name: 'Showcase', href: 'http://localhost:5173/' },
+    { name: 'Home', href: 'http://localhost:5173/' },
     { name: 'Tutorials', href: 'http://localhost:5173/state' },
     { name: 'Blogs', href: 'http://localhost:3000/' },
+    { name: 'Profile', href: 'http://localhost:8080/' },
   ];
 
   return (
@@ -16,7 +17,7 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <a href="http://localhost:5173/" className="text-2xl font-bold bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">
-              Megamind
+              Engineering Playbook
             </a>
           </div>
 
