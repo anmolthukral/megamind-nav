@@ -6,6 +6,11 @@ export default defineConfig({
   plugins: [
     react(),
   ],
+  server: {
+    cors: true,
+    port: 5174,
+    strictPort: true,
+  },
   build: {
     lib: {
       entry: './src/main.tsx',
