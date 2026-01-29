@@ -18,5 +18,5 @@ if (import.meta.env.DEV) {
 }
 
 // Register as Web Component
-const WebNavbar = r2wc(Navbar, { props: {} }); // Add props here if needed
+const WebNavbar = r2wc(Navbar, { props: {}, shadow: false }); // Disable shadow DOM so global CSS works
 customElements.define('engineering-playbook-nav', WebNavbar);
