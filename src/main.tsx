@@ -1,5 +1,5 @@
 import { StrictMode } from 'react'
-import { createRoot, Root } from 'react-dom/client'
+import { createRoot, type Root } from 'react-dom/client'
 import Navbar from './components/Navbar';
 import './index.css'
 
