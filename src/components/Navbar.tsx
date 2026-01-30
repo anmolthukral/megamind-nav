@@ -4,7 +4,6 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { name: 'Home', href: '/' },
     { name: 'Tutorials', href: '/tutorials' },
     { name: 'Blogs', href: '/blogs' },
     { name: 'Profile', href: '/profile' },
