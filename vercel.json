@@ -24,10 +24,15 @@
       ]
     }
   ],
+  "redirects": [
+    { "source": "/tutorials", "destination": "/tutorials/", "permanent": true },
+    { "source": "/profile", "destination": "/profile/", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/nav/:match*", "destination": "/:match*" },
     
     { "source": "/blogs", "destination": "https://megamind-blogs.vercel.app/blogs" },
+    { "source": "/blogs/", "destination": "https://megamind-blogs.vercel.app/blogs/" },
     { "source": "/blogs/:match*", "destination": "https://megamind-blogs.vercel.app/blogs/:match*" },
 
     { "source": "/tutorials", "destination": "https://megamind-tutorials.vercel.app/" },
