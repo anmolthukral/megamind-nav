@@ -16,8 +16,8 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <a href="http://localhost:5173/" className="text-2xl font-bold font-heading bg-gradient-to-r from-accent to-purple-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
-              Anmol Thukral
+            <a href="/" className="text-2xl font-bold font-heading bg-gradient-to-r from-accent to-purple-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
+              Engineer Playbook
             </a>
           </div>
 
