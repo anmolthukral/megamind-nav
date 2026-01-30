@@ -28,15 +28,12 @@
     { "source": "/nav/:match*", "destination": "/:match*" },
     
     { "source": "/blogs", "destination": "https://megamind-blogs.vercel.app/blogs" },
-    { "source": "/blogs/", "destination": "https://megamind-blogs.vercel.app/blogs/" },
     { "source": "/blogs/:match*", "destination": "https://megamind-blogs.vercel.app/blogs/:match*" },
 
     { "source": "/tutorials", "destination": "https://megamind-tutorials.vercel.app/" },
-    { "source": "/tutorials/", "destination": "https://megamind-tutorials.vercel.app/" },
     { "source": "/tutorials/:match*", "destination": "https://megamind-tutorials.vercel.app/:match*" },
 
     { "source": "/profile", "destination": "https://megamind-profile.vercel.app/" },
-    { "source": "/profile/", "destination": "https://megamind-profile.vercel.app/" },
     { "source": "/profile/:match*", "destination": "https://megamind-profile.vercel.app/:match*" },
 
     { "source": "/", "destination": "https://megamind-blogs.vercel.app/" },
