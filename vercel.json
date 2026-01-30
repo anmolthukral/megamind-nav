@@ -1,31 +1,19 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-
   "headers": [
     {
       "source": "/nav/:path*",
       "headers": [
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        },
-        {
-          "key": "Access-Control-Allow-Methods",
-          "value": "GET, OPTIONS"
-        },
-        {
-          "key": "Access-Control-Allow-Headers",
-          "value": "Content-Type, Authorization"
-        }
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type, Authorization" }
       ]
-    }
-    ,
+    },
     {
       "source": "/webcomponent/:path*",
       "headers": [
         { "key": "Access-Control-Allow-Origin", "value": "*" },
-        { "key": "Access-Control-Allow-Methods", "value": "GET, OPTIONS" },
-        { "key": "Access-Control-Allow-Headers", "value": "Content-Type" }
+        { "key": "Access-Control-Allow-Methods", "value": "GET, OPTIONS" }
       ]
     },
     {
@@ -34,46 +22,18 @@
         { "key": "Access-Control-Allow-Origin", "value": "*" },
         { "key": "Access-Control-Allow-Methods", "value": "GET, OPTIONS" }
       ]
-    },
-    {
-      "source": "/nav-fragment",
-      "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "*" },
-        { "key": "Access-Control-Allow-Methods", "value": "GET, OPTIONS" },
-        { "key": "Access-Control-Allow-Headers", "value": "Content-Type" }
-      ]
     }
   ],
-
   "redirects": [
-    {
-      "source": "/tutorials",
-      "destination": "/tutorials/",
-      "permanent": true
-    },
-    {
-      "source": "/profile",
-      "destination": "/profile/",
-      "permanent": true
-    }
+    { "source": "/tutorials", "destination": "/tutorials/", "permanent": true },
+    { "source": "/profile", "destination": "/profile/", "permanent": true }
   ],
   "rewrites": [
-    {
-      "source": "/nav/:path*",
-      "destination": "/:path*"
-    },
-    {
-      "source": "/blogs/:path*",
-      "destination": "https://megamind-blogs.vercel.app/blogs/:path*"
-    },
-    {
-      "source": "/profile/:path*",
-      "destination": "https://megamind-profile.vercel.app/:path*"
-    },
-    {
-      "source": "/tutorials/:path*",
-      "destination": "https://megamind-tutorials.vercel.app/:path*"
-    },
-  { "source": "/", "destination": "https://megamind-blogs.vercel.app/blogs/" }
+    { "source": "/nav/:match*", "destination": "/:match*" },
+    { "source": "/blogs/:match*", "destination": "https://megamind-blogs.vercel.app/blogs/:match*" },
+    { "source": "/tutorials/:match*", "destination": "https://megamind-tutorials.vercel.app/:match*" },
+    { "source": "/profile/:match*", "destination": "https://megamind-profile.vercel.app/:match*" },
+    { "source": "/", "destination": "https://megamind-blogs.vercel.app/" },
+    { "source": "/:path*", "destination": "https://megamind-blogs.vercel.app/:path*" }
   ]
 }
