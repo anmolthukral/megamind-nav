@@ -24,7 +24,7 @@
   "rewrites": [
     {
       "source": "/blogs/:path*",
-      "destination": "https://megamind-blogs.vercel.app/:path*"
+      "destination": "https://megamind-blogs.vercel.app/blogs/:path*"
     },
     {
       "source": "/profile/:path*",
