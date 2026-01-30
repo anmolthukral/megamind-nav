@@ -29,19 +29,18 @@
     { "source": "/profile", "destination": "/profile/", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/nav/:match*", "destination": "/:match*" },
+    { "source": "/nav/(.*)", "destination": "/$1" },
     
     { "source": "/blogs", "destination": "https://megamind-blogs.vercel.app/blogs" },
-    { "source": "/blogs/", "destination": "https://megamind-blogs.vercel.app/blogs/" },
-    { "source": "/blogs/:match*", "destination": "https://megamind-blogs.vercel.app/blogs/:match*" },
+    { "source": "/blogs/(.*)", "destination": "https://megamind-blogs.vercel.app/blogs/$1" },
 
-    { "source": "/tutorials", "destination": "https://megamind-tutorials.vercel.app/" },
-    { "source": "/tutorials/:match*", "destination": "https://megamind-tutorials.vercel.app/:match*" },
+    { "source": "/tutorials/", "destination": "https://megamind-tutorials.vercel.app/" },
+    { "source": "/tutorials/(.*)", "destination": "https://megamind-tutorials.vercel.app/$1" },
 
-    { "source": "/profile", "destination": "https://megamind-profile.vercel.app/" },
-    { "source": "/profile/:match*", "destination": "https://megamind-profile.vercel.app/:match*" },
+    { "source": "/profile/", "destination": "https://megamind-profile.vercel.app/" },
+    { "source": "/profile/(.*)", "destination": "https://megamind-profile.vercel.app/$1" },
 
     { "source": "/", "destination": "https://megamind-blogs.vercel.app/" },
-    { "source": "/:path*", "destination": "https://megamind-blogs.vercel.app/:path*" }
+    { "source": "/(.*)", "destination": "https://megamind-blogs.vercel.app/$1" }
   ]
 }
