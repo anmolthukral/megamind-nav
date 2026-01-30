@@ -33,14 +33,7 @@
     {
       "source": "/tutorials/:path*",
       "destination": "https://megamind-tutorials.vercel.app/:path*"
-    }
-  ],
-
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "/blogs",
-      "permanent": false
-    }
+    },
+    { "source": "/", "destination": "https://megamind-blogs.vercel.app/" }
   ]
 }
