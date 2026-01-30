@@ -45,7 +45,23 @@
     }
   ],
 
+  "redirects": [
+    {
+      "source": "/tutorials",
+      "destination": "/tutorials/",
+      "permanent": true
+    },
+    {
+      "source": "/profile",
+      "destination": "/profile/",
+      "permanent": true
+    }
+  ],
   "rewrites": [
+    {
+      "source": "/nav/:path*",
+      "destination": "/:path*"
+    },
     {
       "source": "/blogs/:path*",
       "destination": "https://megamind-blogs.vercel.app/blogs/:path*"
