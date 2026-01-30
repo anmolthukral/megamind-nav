@@ -7,7 +7,7 @@
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "https://engineerplaybook.io"
+          "value": "*"
         },
         {
           "key": "Access-Control-Allow-Methods",
@@ -17,6 +17,30 @@
           "key": "Access-Control-Allow-Headers",
           "value": "Content-Type, Authorization"
         }
+      ]
+    }
+    ,
+    {
+      "source": "/webcomponent/:path*",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type" }
+      ]
+    },
+    {
+      "source": "/common-nav.css",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, OPTIONS" }
+      ]
+    },
+    {
+      "source": "/nav-fragment",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type" }
       ]
     }
   ],
@@ -34,6 +58,6 @@
       "source": "/tutorials/:path*",
       "destination": "https://megamind-tutorials.vercel.app/:path*"
     },
-    { "source": "/", "destination": "https://megamind-blogs.vercel.app/" }
+  { "source": "/", "destination": "https://megamind-blogs.vercel.app/blogs/" }
   ]
 }
