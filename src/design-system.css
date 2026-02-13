@@ -97,13 +97,21 @@ img { max-width: 100%; display: block; }
 
 /* ── Oat topnav Overrides for Light Theme ── */
 nav[data-topnav] {
-  background-color: rgba(255, 255, 255, 0.8) !important;
+  /* Reset and match .navbar styles */
+  background-color: rgba(255, 255, 255, 0.95) !important; /* increased opacity for mobile menu */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color) !important;
   box-shadow: var(--shadow-sm) !important;
-  padding-top: 0.5rem !important; /* Added breathing room */
+  padding-top: 0.5rem !important;
   box-sizing: border-box;
+  display: flex !important;
+  align-items: center !important;
+  height: var(--header-height);
+  position: fixed;
+  top: 0; 
+  width: 100%;
+  z-index: 1000;
 }
 
 nav[data-topnav] a {

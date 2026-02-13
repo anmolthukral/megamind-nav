@@ -1,18 +1,28 @@
 import React from 'react';
 
 const Navbar: React.FC = () => {
-  return (
-    <nav data-topnav>
-      <a href="/" className="text-xl font-bold" style={{ textDecoration: 'none', color: 'var(--foreground)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-        <img src="/logo.svg" alt="Engineer Playbook Logo" style={{ height: '32px', width: '32px' }} />
-        Engineer Playbook
-      </a>
+  const [isOpen, setIsOpen] = React.useState(false);
 
-      <div style={{ marginLeft: 'auto', display: 'flex', gap: 'var(--space-4)' }}>
-        <a href="/blogs" onClick={(e) => { e.preventDefault(); window.location.href = '/blogs'; }}>Blogs</a>
-        <a href="/tutorials" onClick={(e) => { e.preventDefault(); window.location.href = '/tutorials'; }}>Tutorials</a>
-        <a href="/profile" onClick={(e) => { e.preventDefault(); window.location.href = '/profile'; }}>Profile</a>
-        <a href="/tutorials/playground" onClick={(e) => { e.preventDefault(); window.location.href = '/tutorials/playground'; }}>Playground</a>
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  return (
+    <nav data-topnav className="navbar">
+      <div className="container">
+        <a href="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', color: 'inherit' }}>
+          <img src="/logo.svg" alt="Engineer Playbook Logo" style={{ height: '32px', width: '32px' }} />
+          Engineer Playbook
+        </a>
+
+        <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle navigation">
+          <span style={{ fontSize: '1.5rem' }}>☰</span>
+        </button>
+
+        <div className={`nav-links ${isOpen ? 'active' : ''}`}>
+          <a href="/blogs" className="nav-link" onClick={() => setIsOpen(false)}>Blogs</a>
+          <a href="/tutorials" className="nav-link" onClick={() => setIsOpen(false)}>Tutorials</a>
+          <a href="/profile" className="nav-link" onClick={() => setIsOpen(false)}>Profile</a>
+          <a href="/tutorials/playground" className="nav-link" onClick={() => setIsOpen(false)}>Playground</a>
+        </div>
       </div>
     </nav>
   );
