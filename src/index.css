@@ -1,7 +1,1 @@
-:root {
-  --header-height: 80px;
-}
-
-body {
-  font-family: var(--font-sans);
-}
+@import './design-system.css';
