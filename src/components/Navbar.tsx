@@ -15,10 +15,10 @@ const Navbar: React.FC = () => {
             so we might rely on standard CSS or the 'is-mobile' pattern if available.
             For now, let's just render them as simple links as Oat intended for topnav.
         */}
-        <a href="/tutorials">Tutorials</a>
-        <a href="/blogs">Blogs</a>
-        <a href="/profile">Profile</a>
-        <a href="/tutorials/playground">Playground</a>
+        <a href="/tutorials" onClick={(e) => { e.preventDefault(); window.location.href = '/tutorials'; }}>Tutorials</a>
+        <a href="/blogs" onClick={(e) => { e.preventDefault(); window.location.href = '/blogs'; }}>Blogs</a>
+        <a href="/profile" onClick={(e) => { e.preventDefault(); window.location.href = '/profile'; }}>Profile</a>
+        <a href="/tutorials/playground" onClick={(e) => { e.preventDefault(); window.location.href = '/tutorials/playground'; }}>Playground</a>
       </div>
     </nav>
   );
