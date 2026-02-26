@@ -69,6 +69,11 @@
 
   /* Motion */
   --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Spacing Extensions */
+  --space-20: 5rem;
+  --space-22: 5.5rem;
+  --space-24: 6rem;
 }
 
 /* ── Base Resets ── */
