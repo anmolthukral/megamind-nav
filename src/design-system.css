@@ -13,24 +13,24 @@
 :root {
   /* Oat Core Semantic Tokens — overridden for Light */
   --background: #ffffff;
-  --foreground: #0f172a;
+  --foreground: #1a2b4b;
   --card: #ffffff;
-  --card-foreground: #0f172a;
+  --card-foreground: #1a2b4b;
   --muted: #f1f5f9;
-  --muted-foreground: #64748b;
-  --accent: #f0f9ff;
-  --accent-foreground: #0284c7;
+  --muted-foreground: #475569;
+  --accent: #f0fdf4;
+  --accent-foreground: #2b5b9a;
   --border: #e2e8f0;
   --input: #e2e8f0;
-  --ring: #0ea5e9;
-  --primary: #0ea5e9;
+  --ring: #2b5b9a;
+  --primary: #2b5b9a;
   --primary-foreground: #ffffff;
   --secondary: #f1f5f9;
-  --secondary-foreground: #0f172a;
+  --secondary-foreground: #1a2b4b;
   --destructive: #ef4444;
   --destructive-foreground: #fef2f2;
-  --success: #10b981;
-  --warning: #f59e0b;
+  --success: #4cb050;
+  --warning: #fba919;
   --danger: #ef4444;
 
   /* Shadows — Soft & Modern */
@@ -48,14 +48,14 @@
   --bg-color: #f8fafc; /* Slightly off-white page background */
   --surface-color: #ffffff;
   
-  /* Logo-Inspired Palette (Polished for Light Mode) */
-  --accent-color: #0ea5e9;  /* Sky 500 */
-  --accent-green: #10b981;  /* Emerald 500 */
-  --accent-gold: #f59e0b;   /* Amber 500 */
-  --accent-red: #ef4444;    /* Red 500 */
+  /* Logo-Inspired Palette (Growth & Stability) */
+  --accent-color: #2b5b9a;  /* Deep Growth Blue */
+  --accent-green: #4cb050;  /* Growth Green */
+  --accent-gold: #fba919;   /* Gear Orange */
+  --accent-red: #ef4444;    /* Alert Red */
   
-  --text-primary: #0f172a;   /* Slate 900 */
-  --text-secondary: #64748b; /* Slate 500 */
+  --text-primary: #1a2b4b;   /* Logo Dark Navy */
+  --text-secondary: #475569; /* Slate 600 */
   --border-color: #e2e8f0;   /* Slate 200 */
 
   /* Typography */
@@ -158,7 +158,7 @@ nav[data-topnav] a[aria-current] {
   align-items: center; justify-content: center;
   text-align: center; padding-top: var(--header-height);
   position: relative;
-  background: radial-gradient(circle at 50% 50%, #f0f9ff 0%, transparent 70%);
+  background: radial-gradient(circle at 50% 50%, #f0fdf4 0%, transparent 70%);
 }
 .hero-avatar {
   width: 140px; height: 140px; border-radius: 50%;
@@ -168,7 +168,7 @@ nav[data-topnav] a[aria-current] {
 }
 .hero-title {
   font-size: 3.5rem; margin-bottom: 0.5rem;
-  background: linear-gradient(135deg, #0f172a 0%, #475569 100%);
+  background: linear-gradient(135deg, #1a2b4b 0%, #2b5b9a 50%, #4cb050 100%);
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent;
   padding-bottom: 0.2rem; /* Fix clipped descenders */
@@ -236,7 +236,12 @@ nav[data-topnav] a[aria-current] {
 .card-title { font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-primary); }
 .card-text { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1; }
 
-.post-grid { @extend .grid-3; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; }
+.post-grid { 
+  display: grid; 
+  gap: 1.5rem; 
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
+  gap: 2rem; 
+}
 
 /* ── Footer ── */
 .footer {
