@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
     <nav data-topnav className="navbar">
       <div className="container">
         <a href="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', color: 'inherit' }}>
-          <img src="/logo.png" alt="Engineer Playbook Logo" style={{ height: '32px', width: '32px' }} />
+          <img src="/logo.svg" alt="Engineer Playbook Logo" style={{ height: '32px', width: '32px' }} />
           Engineer Playbook
         </a>
 
@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
           {showTutorials && (
             <a href="/tutorials" className="nav-link" onClick={() => setIsOpen(false)}>Tutorials</a>
           )}
-          <a href="/profile" className="nav-link" onClick={() => setIsOpen(false)}>Profile</a>
+          <a href="/profile" className="nav-link" onClick={() => setIsOpen(false)}>Team</a>
           {showTutorials && showPlayground && (
             <a href="/tutorials/playground" className="nav-link" onClick={() => setIsOpen(false)}>Playground</a>
           )}
