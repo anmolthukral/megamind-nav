@@ -2,11 +2,14 @@ import React from 'react';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const pathname = typeof window === 'undefined' ? '/' : window.location.pathname;
+  const isBlogsActive = pathname === '/' || pathname.startsWith('/blogs');
+  const isTeamActive = pathname.startsWith('/profile');
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-
-  const showTutorials = import.meta.env.VITE_FEATURE_TUTORIALS !== 'false';
-  const showPlayground = import.meta.env.VITE_FEATURE_PLAYGROUND !== 'false';
+  const navLinks = [
+    { href: '/blogs', label: 'Blogs', isActive: isBlogsActive },
+    { href: '/profile', label: 'Team', isActive: isTeamActive },
+  ];
 
   return (
     <nav data-topnav className="navbar">
@@ -16,19 +19,27 @@ const Navbar: React.FC = () => {
           Engineer Playbook
         </a>
 
-        <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle navigation">
+        <button
+          className="menu-toggle"
+          onClick={() => setIsOpen((open) => !open)}
+          aria-label="Toggle navigation"
+          aria-expanded={isOpen}
+        >
           <span style={{ fontSize: '1.5rem' }}>☰</span>
         </button>
 
         <div className={`nav-links ${isOpen ? 'active' : ''}`}>
-          <a href="/blogs" className="nav-link" onClick={() => setIsOpen(false)}>Blogs</a>
-          {showTutorials && (
-            <a href="/tutorials" className="nav-link" onClick={() => setIsOpen(false)}>Tutorials</a>
-          )}
-          <a href="/profile" className="nav-link" onClick={() => setIsOpen(false)}>Team</a>
-          {showTutorials && showPlayground && (
-            <a href="/tutorials/playground" className="nav-link" onClick={() => setIsOpen(false)}>Playground</a>
-          )}
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className={`nav-link ${link.isActive ? 'active' : ''}`}
+              aria-current={link.isActive ? 'page' : undefined}
+              onClick={() => setIsOpen(false)}
+            >
+              {link.label}
+            </a>
+          ))}
         </div>
       </div>
     </nav>
